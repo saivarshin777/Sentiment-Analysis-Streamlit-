@@ -33,23 +33,37 @@ st.markdown("""
 body {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
+
+header {
+    visibility: hidden;
+}
+
+.block-container {
+    padding-top: 1rem !important;
+}
+
 .main {
     background-color: rgba(255, 255, 255, 0.06);
     padding: 3rem;
     border-radius: 20px;
     backdrop-filter: blur(10px);
+    margin-top: 0px !important;
 }
+
 h1 {
     text-align: center;
     color: #ffffff;
 }
+
 p {
     text-align: center;
     color: #dddddd;
 }
+
 textarea {
     border-radius: 12px !important;
 }
+
 .stButton>button {
     background: linear-gradient(90deg, #ff512f, #dd2476);
     color: white;
@@ -57,9 +71,6 @@ textarea {
     padding: 0.6rem 2rem;
     font-size: 16px;
     border: none;
-}
-.stButton>button:hover {
-    opacity: 0.9;
 }
 </style>
 """, unsafe_allow_html=True)
