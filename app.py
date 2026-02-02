@@ -1,23 +1,15 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "84cca3c5-94fe-4865-aeab-e06243ae5f17",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "",
-   "name": ""
-  },
-  "language_info": {
-   "name": ""
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+import streamlit as st
+import pickle
+import re
+import nltk
+
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+
+# Download resources (only first time)
+nltk.download('stopwords')
+nltk.download('wordnet')
+
+# Load model and vectorizer
+model = pickle.load(open("imdb_sentiment_model.pkl", "rb"))
+vectorizer = pickle.load(open("imdb_tfidf_vectorizer.pkl
