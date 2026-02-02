@@ -30,48 +30,63 @@ st.set_page_config(
 # ---------------- CUSTOM CSS ----------------
 st.markdown("""
 <style>
-body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-}
 
+/* Hide Streamlit header */
 header {
     visibility: hidden;
 }
 
+/* Remove top padding */
 .block-container {
-    padding-top: 1rem !important;
+    padding-top: 0.5rem !important;
 }
 
+/* 🔥 REMOVE EMPTY STREAMLIT BLOCK (THE GREY BAR) */
+div[data-testid="stVerticalBlock"]:has(> div:empty) {
+    display: none;
+}
+
+/* Background */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Main card */
 .main {
     background-color: rgba(255, 255, 255, 0.06);
     padding: 3rem;
     border-radius: 20px;
-    backdrop-filter: blur(10px);
-    margin-top: 0px !important;
+    backdrop-filter: blur(12px);
+    margin-top: 0 !important;
 }
 
+/* Title */
 h1 {
     text-align: center;
     color: #ffffff;
 }
 
+/* Subtitle */
 p {
     text-align: center;
     color: #dddddd;
 }
 
+/* Text area */
 textarea {
-    border-radius: 12px !important;
+    border-radius: 14px !important;
 }
 
-.stButton>button {
+/* Button */
+.stButton > button {
     background: linear-gradient(90deg, #ff512f, #dd2476);
     color: white;
     border-radius: 30px;
-    padding: 0.6rem 2rem;
+    padding: 0.6rem 2.2rem;
     font-size: 16px;
     border: none;
 }
+
 </style>
 """, unsafe_allow_html=True)
 
